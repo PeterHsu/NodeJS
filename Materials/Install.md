@@ -22,3 +22,20 @@ nvm alias default v5.1.0 (設定預設的版本, 永久有用)
 firewall-cmd --zone=public --add-port=3000/tcp --permanent
 firewall-cmd --reload
 ```
+安裝Raspberry pi 2 on Raspbian Jessie Lite
+```
+wget https://nodejs.org/dist/v5.1.1/node-v5.1.1-linux-armv7l.tar.gz
+cd /usr/local/
+tar -zxvf ~/node-v5.1.1-linux-armv7l.tar.gz
+cd /usr/bin/
+ln -s /usr/local/node-v5.1.1-linux-armv7l/bin/node node
+ln -s /usr/local/node-v5.1.1-linux-armv7l/bin/npm npm
+```
+
+安裝nginx
+```
+apt-get install nginx
+/etc/init.d/nginx start
+hostname -I
+http://localhost/
+```
