@@ -38,4 +38,8 @@ apt-get install nginx
 /etc/init.d/nginx start
 hostname -I
 http://localhost/
+本地路徑
+/usr/share/nginx/html/
+系統路徑
+/etc/nginx/
 ```
