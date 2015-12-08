@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+  <head>
+    <title>Unix Domain Socket範例</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <script src="javascripts/vendors/angular.min.js" charset="utf-8"></script>
+  </head>
+  <body class="container"  ng-controller='peterController as peter'>
+    <div class="panel panel-default">
+      <h1 class="panel-heading">Unix Domain Socket範例</h1>
+      <div class="panel-body">
+        <button class="btn btn-primary" ng-click='peter.callService()'>呼叫服務</button>
+        <p>{{peter.message}}</p>
+      <div>
+  </div>
+    <script>
+      angular.module('app',[])
+      .controller('peterController',['$http',function($http){
+        var self = this;
+        this.message = '';
+        this.callService = function(){
+            $http.get('/api')
+            .success(function(data){
+              self.message = data;
+            });
+        };
+      }]);
+    </script>
+  </body>
+</html>
