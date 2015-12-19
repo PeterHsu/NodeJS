@@ -22,15 +22,16 @@ nvm alias default v5.1.0 (設定預設的版本, 永久有用)
 ### 自行安裝
 因為nvm只能針對個人,所以改用手動安裝
 ```
-wget https://nodejs.org/dist/v5.2.0/node-v5.2.0-linux-x64.tar.gz
+wget https://nodejs.org/dist/v5.3.0/node-v5.3.0-linux-x64.tar.gz
 cd /usr/local/
 tar -zxvf ~/node-v5.2.0-linux-x64.tar.gz
 cd /usr/bin/
-echo "export PATH=$PATH:/usr/local/node-v5.2.0-linux-x64/bin" >> /etc/bashrc
+echo "export PATH=$PATH:/usr/local/node-v5.3.0-linux-x64/bin" >> /etc/profile
+如果有內建時刪除原來的
 rm -f /bin/node
 rm -f /bin/npm
 ```
-重新登入或執行`source /etc/bashrc`
+重新登入或執行`source /etc/profile`
 
 ### 開防火牆
 ```
